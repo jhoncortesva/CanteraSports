@@ -14,16 +14,19 @@ const Login = () => {
       const response = await fetch('http://localhost:5000/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ username, password }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
         if (data.user.rol === 'Admin') {
-          // Si el usuario es Admin, redirige a la página de "Tarjetas"
           navigate('/tarjetas');
-        } else {
+        } if (data.user.rol === 'Estudiante'){
+          navigate('/tarjetasEst');
+        } if (data.user.rol === 'Entrenador'){
+          navigate('/tarjetas')
+        }else {
           setMessage(`Bienvenido ${data.user.username} (${data.user.rol})`);
         }
       } else {
@@ -34,31 +37,79 @@ const Login = () => {
     }
   };
 
+  const containerStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundImage: `url('https://cdn.pixabay.com/photo/2016/04/15/20/28/football-1331838_1280.jpg')`,
+    backgroundSize: 'cover',
+  };
+
+  const formStyle = {
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    padding: '20px',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    width: '300px',
+    textAlign: 'center',
+  };
+
+  const inputStyle = {
+    width: '90%',
+    padding: '10px',
+    margin: '10px 0',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    fontSize: '16px',
+  };
+
+  const buttonStyle = {
+    width: '100%',
+    padding: '10px',
+    borderRadius: '5px',
+    border: 'none',
+    backgroundColor: '#ff003a',
+    color: '#fff',
+    fontSize: '16px',
+    cursor: 'pointer',
+  };
+
+  const titleStyle = {
+    color: '#333',
+    fontSize: '24px',
+    marginBottom: '20px',
+  };
+
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+    <div style={containerStyle}>
+      <form style={formStyle} onSubmit={handleLogin}>
+        <h2 style={titleStyle}>CLUB DEPORTIVO CANTERA SPORT</h2>
         <div>
-          <label>Username:</label>
           <input
+            style={inputStyle}
             type="text"
+            placeholder="Usuario"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
           />
         </div>
         <div>
-          <label>Password:</label>
           <input
+            style={inputStyle}
             type="password"
+            placeholder="Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <button style={buttonStyle} type="submit">
+          Ingresar
+        </button>
+        {message && <p>{message}</p>}
       </form>
-      {message && <p>{message}</p>}
     </div>
   );
 };

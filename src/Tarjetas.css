@@ -1,0 +1,108 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid #ddd; /* Borde del recuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto elevado */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos del Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ff003a;
+  color: #fff;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-right: 10px; /* Espacio entre la imagen y el título */
+}
+
+.navbar-title {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0;
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+  
+  /* Estilos del formulario y tarjetas */
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #ff003a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .li {
+    background-color: #128aec;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button:hover {
+    background-color: #0c1125;
+  }
+  

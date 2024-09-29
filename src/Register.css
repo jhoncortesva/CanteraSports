@@ -1,0 +1,144 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid #ddd; /* Borde del recuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto elevado */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilos del Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ff003a;
+  color: #fff;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-right: 10px; /* Espacio entre la imagen y el título */
+}
+
+.navbar-title {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 0;
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+  
+  /* Estilos del formulario de registro */
+  .register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  input:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+  }
+  
+  .register-button {
+    padding: 10px 15px;
+    background-color: #ff003a;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #0c1125;
+  }
+  
+  .message {
+    margin-top: 20px;
+    text-align: center;
+    color: #3b82f6;
+    font-size: 14px;
+  }
+  
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .navbar-title {
+    font-size: 1.2em;
+  }
+
+  .logo {
+    width: 40px; /* Cambiar el tamaño del logo para móvil */
+  }
+}  
